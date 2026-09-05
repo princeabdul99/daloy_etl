@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: raw__global_fashion_retail
-    config:
-      meta: &meta
+    config: &project
+      meta:
         project_name: daloy
     tables: &tables
       - name: stores
@@ -22,13 +22,11 @@ sources:
         config: *de_owner
 
   - name: raw__global_fashion_retail_dev
-    config:
-      meta: *meta
+    config: *project
     tables: *tables
 
   - name: raw__global_fashion_retail_stg
-    config:
-      meta: *meta
+    config: *project
     tables: *tables
 
 
