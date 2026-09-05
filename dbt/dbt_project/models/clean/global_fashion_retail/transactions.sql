@@ -2,7 +2,7 @@
 
 with source as (
 
-    SELECT * from {{ macrobrew.source('raw__global_fashion_retail', 'transactions') }}
+    SELECT * from {{ get_source('raw__global_fashion_retail', 'transactions') }}
 ),
 
 products AS (

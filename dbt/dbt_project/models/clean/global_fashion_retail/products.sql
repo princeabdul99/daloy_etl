@@ -4,7 +4,7 @@ with source as (
 
     SELECT *,
         ROW_NUMBER() OVER(PARTITION BY product_id ORDER BY product_id) as rn
-    FROM {{ macrobrew.source('raw__global_fashion_retail', 'products') }}
+    FROM {{ get_source('raw__global_fashion_retail', 'products') }}
 
 ),
 
