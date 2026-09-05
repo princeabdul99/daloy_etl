@@ -26,4 +26,5 @@ dbt_project:
       threads: 8
       token: "{{ env_var('DATABRICKS_DBT_TOKEN') }}"
       type: databricks
-  target: dev
+      
+  target: "{{ env_var('DATABRICKS_DBT_TARGET') }}"
