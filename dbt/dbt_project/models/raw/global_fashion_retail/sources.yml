@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: raw__global_fashion_retail
+    config:
+      meta: &meta
+        project_name: daloy
+    tables: &tables
+      - name: stores
+        config: &de_owner
+          meta:
+            owner_role: de
+      - name: employees
+        config: *de_owner
+      - name: products
+        config: *de_owner
+      - name: discounts
+        config: *de_owner
+      - name: customers
+        config: *de_owner
+      - name: transactions
+        config: *de_owner
+
+  - name: raw__global_fashion_retail_dev
+    config:
+      meta: *meta
+    tables: *tables
+
+  - name: raw__global_fashion_retail_stg
+    config:
+      meta: *meta
+    tables: *tables
+
+

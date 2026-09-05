@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: customers
+    description: ""
+    columns:
+      - name: "customer_id"
+        tests:
+          - not_null
+          - unique
+
+      - name: "name"
+        tests:
+          - not_null
+
+      - name: "email"
+        tests:
+          - not_null
+
+      - name: "telephone"
+        tests:
+          - not_null
+
+      - name: "city"
+        tests:
+          - not_null
+
+      - name: "country"
+        tests:
+          - not_null
+
+      - name: "date_of_birth"
+        tests:
+          - not_null

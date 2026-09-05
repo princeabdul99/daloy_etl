@@ -1,0 +1,12 @@
+packages:
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
+    version: 1.4.1
+  - name: codegen
+    package: dbt-labs/codegen
+    version: 0.14.1
+  - git: https://github.com/princeabdul99/macrobrew.git
+    name: macrobrew
+    revision: 1e8cf59e224f3a19da53725a10ec8416874bbb55
+    subdirectory: macrobrew
+sha1_hash: 5c103aaa962c9f433c082de8f0de339182dfecc5

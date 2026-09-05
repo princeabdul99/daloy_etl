@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: discounts
+    description: ""
+    columns:
+      - name: "start"
+        tests:
+          - not_null
+      
+      - name: "end"
+        tests:
+          - not_null
+
+      - name: "discount"
+        tests:
+          - not_null
+
+      - name: "description"
+        tests:
+          - not_null
+
+

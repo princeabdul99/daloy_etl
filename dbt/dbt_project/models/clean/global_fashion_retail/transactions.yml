@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: transactions
+    description: ""
+    columns:
+      - name: "invoice_id"
+        tests:
+          - not_null
+      
+      - name: "line"
+        tests:
+          - not_null
+
+      - name: "customer_id"
+        tests:
+          - not_null
+      
+      - name: "product_id"
+        tests:
+          - not_null
+      
+      
+      - name: "unit_price"
+        tests:
+          - not_null
+      
+      - name: "quantity"
+        tests:
+          - not_null
+      
+      - name: "date"
+        tests:
+          - not_null
+      
+      - name: "discount"
+        tests:
+          - not_null
+
+      - name: "line_total"
+        tests:
+          - not_null
+
+      - name: "store_id"
+        tests:
+          - not_null
+      
+      - name: "employee_id"
+        tests:
+          - not_null
+      
+      - name: "currency"
+        tests:
+          - not_null
+
+      - name: "currency_symbol"
+        tests:
+          - not_null
+      
+      - name: "transaction_type"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Sale", "Return"]
+      
+      - name: "payment_method"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Cash", "Credit Card"]
+      
+      - name: "invoice_total"
+        tests:
+          - not_null

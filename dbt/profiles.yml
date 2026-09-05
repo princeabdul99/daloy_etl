@@ -1,0 +1,29 @@
+dbt_project:
+  outputs:
+    dev:
+      catalog: abdul_data_project
+      host: dbc-d50dc4b2-868f.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/ccc625b924f6b515
+      schema: dev
+      threads: 8
+      token: "{{ env_var('DATABRICKS_DBT_TOKEN') }}"
+      type: databricks
+    
+    stg:
+      catalog: abdul_data_project
+      host: dbc-d50dc4b2-868f.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/ccc625b924f6b515
+      schema: stg
+      threads: 8
+      token: "{{ env_var('DATABRICKS_DBT_TOKEN') }}"
+      type: databricks
+    
+    prod:
+      catalog: abdul_data_project
+      host: dbc-d50dc4b2-868f.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/ccc625b924f6b515
+      schema: prod
+      threads: 8
+      token: "{{ env_var('DATABRICKS_DBT_TOKEN') }}"
+      type: databricks
+  target: dev

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: products
+    description: ""
+    columns:
+      - name: "product_id"
+        tests:
+          - not_null
+          - unique
+
+      - name: "category"
+        tests:
+          - not_null
+
+      - name: "sub_category"
+        tests:
+          - not_null
+
+      - name: "description"
+        tests:
+          - not_null
+
+      - name: "production_cost"
+        tests:
+          - not_null

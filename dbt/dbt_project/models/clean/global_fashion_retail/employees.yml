@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: employees
+    description: ""
+    columns:
+      - name: "employee_id"
+        tests:
+          - not_null
+          - unique
+
+      - name: "store_id"
+        tests:
+          - not_null
+
+      - name: "name"
+        tests:
+          - not_null
+
+      - name: "position"
+        tests:
+          - not_null

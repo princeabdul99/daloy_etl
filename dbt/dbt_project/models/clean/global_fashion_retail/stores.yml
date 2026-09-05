@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stores
+    description: ""
+    columns:
+      - name: "store_id"
+        tests:
+          - not_null
+          - unique
+
+      - name: "country"
+        tests:
+          - not_null
+
+      - name: "city"
+        tests:
+          - not_null
+
+      - name: "store_name"
+        tests:
+          - not_null
+
+      - name: "number_of_employees"
+        tests:
+          - not_null
+
+      - name: "zip_code"
+        tests:
+          - not_null
+
+      - name: "latitude"
+        tests:
+          - not_null
+
+      - name: "longitude"
+        tests:
+          - not_null
