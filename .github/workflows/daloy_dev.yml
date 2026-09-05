@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DATABRICKS_DBT_TOKEN: ${{ secrets.DATABRICKS_DBT_TOKEN }}
+      DBT_ENV_SECRET_GIT_CREDENTIAL: ${{ secrets.DBT_ENV_SECRET_GIT_CREDENTIAL }}
       DATABRICKS_DBT_TARGET: dev
 
     steps:

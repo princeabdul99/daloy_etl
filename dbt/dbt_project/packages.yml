@@ -4,6 +4,6 @@ packages:
   - package: dbt-labs/codegen
     version: 0.14.1
 
-  - git: "https://github.com/princeabdul99/macrobrew.git"
+  - git: "https://{{ env_var('DBT_ENV_SECRET_GIT_CREDENTIAL') }}@github.com/princeabdul99/macrobrew.git"
     revision: "release/v0.1.0"
     subdirectory: "macrobrew"
