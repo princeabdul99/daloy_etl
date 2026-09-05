@@ -1,0 +1,40 @@
+# .github/workflows/daloy_staging.yml
+name: Deploy ETL to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+    env:
+      DATABRICKS_DBT_TOKEN: ${{ secrets.DATABRICKS_DBT_TOKEN }}
+      DATABRICKS_DBT_TARGET: stg
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        working-directory: dbt/dbt_project
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install dbt packages
+        working-directory: dbt/dbt_project
+        run: dbt deps --profiles-dir ..
+
+      - name: dbt debug
+        working-directory: dbt/dbt_project
+        run: dbt debug --profiles-dir ..
+
+      - name: dbt build
+        working-directory: dbt/dbt_project
+        run: dbt build --profiles-dir ..  
